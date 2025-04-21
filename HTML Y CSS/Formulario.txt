@@ -1,0 +1,269 @@
+HTML
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Si quieres descuento en tus entradas de conciertos, entra aqui para saber como">
+    <link rel="shortcut icon" href="../IMG/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
+    <link rel="preload" href="../CSS/estilo3.css" as="style">
+    <link rel="stylesheet" href="../CSS/estilo3.css">
+    <title>Formulario</title>
+</head>
+<body>
+    <header class="header-cont">
+        <nav class="nav-main">
+            <a href="../index.html" rel="noreferrer">Inicio</a>
+            <a href="../PAGINAS/saberMas.html" rel="noreferrer">Saber Más</a>
+            <a href="../PAGINAS/conciertos.html" rel="noreferrer">Conciertos</a>
+        </nav>
+        <img src="../IMG/logo.png" alt="Logo" class="logo" title="Ticket">
+    </header>
+    <main>
+        <h1>Estás a un paso de participar y obtener información sobre qué entradas estarán en descuento.</h1>
+        <form>
+            <label>Ingrese Su Correo Electronico:</label>
+            <input type="email" autocomplete="off" placeholder="Ingrese su Correo" required>
+            <button>Enviar <span></span></button>
+        </form>
+        <div class="sponsors">
+            <div class="slider">
+                <a href="https://www.chiletiket.com/" target="_blank" rel="noreferrer"><img src="../IMG/sponsors/ChileTiket-Logotipo.png" alt="ChileTiket"></a>
+                <a href="https://www.puntoticket.com/" target="_blank" rel="noreferrer"><img src="../IMG/sponsors/PuntoTicket.svg" alt="PuntoTicket"></a>
+                <a href="https://ticketplus.cl/" target="_blank" rel="noreferrer"><img src="../IMG/sponsors/ticketplus.svg" alt="ticketplus"></a>
+            </div>
+            <div class="slider">
+                <a href="https://www.chiletiket.com/" target="_blank" rel="noreferrer"><img src="../IMG/sponsors/ChileTiket-Logotipo.png" alt="ChileTiket"></a>
+                <a href="https://www.puntoticket.com/" target="_blank" rel="noreferrer"><img src="../IMG/sponsors/PuntoTicket.svg" alt="PuntoTicket"></a>
+                <a href="https://ticketplus.cl/" target="_blank" rel="noreferrer"><img src="../IMG/sponsors/ticketplus.svg" alt="ticketplus"></a>
+            </div>
+            <div class="slider">
+                <a href="https://www.chiletiket.com/" target="_blank" rel="noreferrer"><img src="../IMG/sponsors/ChileTiket-Logotipo.png" alt="ChileTiket"></a>
+                <a href="https://www.puntoticket.com/" target="_blank" rel="noreferrer"><img src="../IMG/sponsors/PuntoTicket.svg" alt="PuntoTicket"></a>
+                <a href="https://ticketplus.cl/" target="_blank" rel="noreferrer"><img src="../IMG/sponsors/ticketplus.svg" alt="ticketplus"></a>
+            </div>
+            <div class="slider">
+                <a href="https://www.chiletiket.com/" target="_blank" rel="noreferrer"><img src="../IMG/sponsors/ChileTiket-Logotipo.png" alt="ChileTiket"></a>
+                <a href="https://www.puntoticket.com/" target="_blank" rel="noreferrer"><img src="../IMG/sponsors/PuntoTicket.svg" alt="PuntoTicket"></a>
+                <a href="https://ticketplus.cl/" target="_blank" rel="noreferrer"><img src="../IMG/sponsors/ticketplus.svg" alt="ticketplus"></a>
+            </div>
+        </div>
+    </main>
+    <div class="copyright">
+        <small>Copyright © 2010-2025 Ticket Company. Todos los derechos reservados.</small>
+    </div>
+</body>
+</html>
+
+
+
+CSS
+
+/*Variables*/
+:root{
+    --fuente: "Funnel Display", sans-serif;
+    --corazon-purpura: #8E2DE2;
+    --indigo-electrico: #4A00E0;
+    --blanco: #ffffff;
+    --negro: #000000;
+    --gris: #cdcdcd;
+    --gris-calido: #403d39;
+    --azul-casi-casi-oscuro: #1a273d;
+    --azul-casi-oscuro: #141e30;
+    --rosado: #C70039;
+    --rojo: #ff0000;
+    --naranjo: #ff7800;
+    --verde-claro: #00ff97;
+    --verde-oscuro: #007f4b;
+    --celeste: #00b9ff;
+}
+
+
+
+/*Todo Los Elementos*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--fuente);
+}
+
+html{
+    font-size: 62.5%;
+}
+
+/*Body*/
+body{
+    font-size: 16px;
+    background: linear-gradient(to right, var(--corazon-purpura), var(--indigo-electrico));
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+/*Head*/
+.header-cont{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid var(--negro);
+    height: 10vh;
+    width: 90%;
+    margin: auto;
+    padding-top: .5rem;
+}
+
+.logo{
+    height: 9rem;
+    width: 9rem;
+}
+
+.nav-main{
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+}
+
+.nav-main a{
+    text-decoration: none;
+    font-size: 2rem;
+    color: var(--blanco);
+}
+
+.nav-main a:hover{
+    transform: scale(1.3);
+}
+
+
+/*Main*/
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 50vh;
+}
+
+main h1{
+    color: var(--blanco);
+    font-size: 4rem;
+}
+
+form{
+    width: 40vw;
+    height: 10vh;
+    border-radius: .5rem;
+    padding: 0 2rem;
+    position: relative;
+    box-shadow: 0 0 1rem var(--negro);
+}
+
+form label{
+    font-size: 2rem;
+    color: var(--negro);
+    font-weight: bold;
+    position: absolute;
+    top: 3.5rem;
+    left: 1rem;
+    color: var(--blanco);
+}
+
+form input{
+    padding: .7rem 1rem;
+    border-radius: .5rem;
+    border: none;
+    width: 13vw;
+    position: absolute;
+    top: 3.5rem;
+    left: 31rem;
+    background: var(--azul-casi-oscuro);
+    color: var(--blanco);
+    font-weight: bold;
+}
+
+form input:focus{
+    outline: none;
+}
+
+form button{
+    cursor: pointer;
+    padding: 1rem 5rem;
+    font-weight: bold;
+    font-size: 1.6rem;
+    border: none;
+    border-radius: 1rem;
+    position: absolute;
+    top: 3rem;
+    right: 6rem;
+    background: var(--azul-casi-oscuro);
+    color: var(--blanco);
+    filter: drop-shadow(0 0 1rem var(--negro));
+    overflow: hidden;
+}
+
+form button:hover{
+    background: var(--azul-casi-casi-oscuro);
+}
+
+
+form button span{
+    position: absolute;
+    width: 30%;
+    background: linear-gradient(to left, var(--corazon-purpura), var(--indigo-electrico));
+    bottom: 0;
+    right: 0;
+}
+
+form button:hover span{
+    height: .3rem;
+    right: 100%;
+    transition: 2s;
+}
+
+
+.sponsors{
+    position: absolute;
+    bottom: 5rem;
+    white-space: nowrap;
+}
+
+.slider{
+    display: inline-block;
+    animation: slider 5s infinite linear;
+}
+
+.slider img{
+    height: 5rem;
+    width: 30rem;
+}
+
+@keyframes slider{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+
+/*Copyright*/
+.copyright{
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: var(--azul-casi-oscuro);
+    position: absolute;
+    bottom: 0;
+}
+
+.copyright small{
+    color: var(--blanco);
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Si quieres descuento en tus entradas de conciertos, entra aqui para saber como">
+    <link rel="shortcut icon" href="../IMG/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
+    <link rel="preload" href="../CSS/estilo3.css" as="style">
+    <link rel="stylesheet" href="../CSS/estilo3.css">
+    <title>Formulario</title>
+</head>
+<body>
+    <header class="header-cont">
+        <nav class="nav-main">
+            <a href="../index.html" rel="noreferrer">Inicio</a>
+            <a href="../PAGINAS/saberMas.html" rel="noreferrer">Saber Más</a>
+            <a href="../PAGINAS/conciertos.html" rel="noreferrer">Conciertos</a>
+        </nav>
+        <img src="../IMG/logo.png" alt="Logo" class="logo" title="Ticket">
+    </header>
+    <main>
+        <h1>Estás a un paso de participar y obtener información sobre qué entradas estarán en descuento.</h1>
+        <form action="registro.php" onsubmit="crearCuenta(event)" method="post">
+            <h2>Cree su Cuenta</h2>
+            <div class="form-left">
+                <div class="nombre">
+                    <label>Nombre</label>
+                    <input type="text" id="inpNombre" autocomplete="off" placeholder="Nombre" onclick="">
+                    <div class="msj-nombre" id="errorNombre"></div>
+                </div> <br>
+                <div class="apellido">
+                    <label>Apellido</label>
+                    <input type="text" id="inpApellido" autocomplete="off" placeholder="Apellido">
+                    <div class="msj-apellido" id="errorApellido"></div>
+                </div> <br>
+                <div class="correo">
+                    <label>Correo Electronico</label>
+                    <input type="email" id="inpCorreo" autocomplete="off" placeholder="Correo">
+                    <div class="msj-email" id="errorEmail"></div>
+                </div> <br>
+                <div class="pass">
+                    <label>Contraseña</label>
+                    <input type="password" id="inpPassword" autocomplete="off" placeholder="Contraseña">
+                    <div class="msj-password" id="errorPassword"></div><br>
+                    <label>Confirmar Contraseña</label>
+                    <input type="password" id="inpPasswordAgain" autocomplete="off" placeholder="Contraseña">
+                    <div class="msj-password2" id="errorPassword2"></div>
+                </div> <br>
+            </div>
+            <div class="form-right">
+                <div class="cont-dir">
+                    <div class="calle">
+                        <label>Calle</label>
+                        <input type="text" id="inpCalle" placeholder="Calle" autocomplete="off">
+                        <div class="msj-calle" id="errorCalle"></div>
+                    </div>
+                    <div class="numero">
+                        <label>Numero</label>
+                        <input type="number" id="inpNumero" placeholder="Numero">
+                        <div class="msj-numero" id="errorNumero"></div>
+                    </div>
+                    <div class="codigo-postal">
+                        <label>Codigo Postal</label>
+                        <input type="number" id="inpPostal" placeholder="Codigo Postal">
+                        <div class="msj-postal" id="errorPostal"></div>
+                    </div>
+                    <div class="region">
+                        <label>Region</label>
+                        <select id="selectRegion">
+                            <option value="AricaParinacota">Arica y Parinacota</option>
+                            <option value="Tarapacá">Tarapacá</option>
+                            <option value="Antofagasta">Antofagasta</option>
+                            <option value="Atacama">Atacama</option>
+                            <option value="Coquimbo">Coquimbo</option>
+                            <option value="Valparaíso">Valparaíso</option>
+                            <option value="Metropolitana">Metropolitana</option>
+                            <option value="O'Higgins">O'Higgins</option>
+                            <option value="Maule">Maule</option>
+                            <option value="Ñuble">Ñuble</option>
+                            <option value="Biobio">Biobio</option>
+                            <option value="La Araucania">La Araucania</option>
+                            <option value="Los Rios">Los Rios</option>
+                            <option value="Los Lagos">Los Lagos</option>
+                            <option value="Aysen">Aysen</option>
+                            <option value="Magallanes">Magallanes</option>
+                        </select>
+                    </div>
+                    <div class="comuna">
+                        <label>Comuna</label>
+                        <input type="text" id="inpComuna" placeholder="Comuna" autocomplete="off">
+                        <div class="msj-comuna" id="errorComuna"></div>
+                    </div>
+                </div>
+                <div class="comentario">
+                    <textarea id="comentarios" rows="6" cols="60"
+                        placeholder="Deje un Comentario Sobre el Diseño de la Pagina Web"></textarea>
+                    <div class="msj-comentario" id="errorComentario"></div>
+
+                </div>
+                <div class="terminos">
+                    <input type="checkbox" id="chkTerminos"><a href="#terminos" target="_blank" rel="noreferrer">Aceptar
+                        Terminos y Condiciones.</a>
+                </div>
+            </div>
+            <button id="enviar">Enviar <span></span></button>
+        </form>
+        <div class="sponsors">
+            <div class="slider">
+                <a href="https://www.chiletiket.com/" target="_blank" rel="noreferrer"><img
+                        src="../IMG/sponsors/ChileTiket-Logotipo.png" alt="ChileTiket"></a>
+                <a href="https://www.puntoticket.com/" target="_blank" rel="noreferrer"><img
+                        src="../IMG/sponsors/PuntoTicket.svg" alt="PuntoTicket"></a>
+                <a href="https://ticketplus.cl/" target="_blank" rel="noreferrer"><img
+                        src="../IMG/sponsors/ticketplus.svg" alt="ticketplus"></a>
+            </div>
+            <div class="slider">
+                <a href="https://www.chiletiket.com/" target="_blank" rel="noreferrer"><img
+                        src="../IMG/sponsors/ChileTiket-Logotipo.png" alt="ChileTiket"></a>
+                <a href="https://www.puntoticket.com/" target="_blank" rel="noreferrer"><img
+                        src="../IMG/sponsors/PuntoTicket.svg" alt="PuntoTicket"></a>
+                <a href="https://ticketplus.cl/" target="_blank" rel="noreferrer"><img
+                        src="../IMG/sponsors/ticketplus.svg" alt="ticketplus"></a>
+            </div>
+            <div class="slider">
+                <a href="https://www.chiletiket.com/" target="_blank" rel="noreferrer"><img
+                        src="../IMG/sponsors/ChileTiket-Logotipo.png" alt="ChileTiket"></a>
+                <a href="https://www.puntoticket.com/" target="_blank" rel="noreferrer"><img
+                        src="../IMG/sponsors/PuntoTicket.svg" alt="PuntoTicket"></a>
+                <a href="https://ticketplus.cl/" target="_blank" rel="noreferrer"><img
+                        src="../IMG/sponsors/ticketplus.svg" alt="ticketplus"></a>
+            </div>
+            <div class="slider">
+                <a href="https://www.chiletiket.com/" target="_blank" rel="noreferrer"><img
+                        src="../IMG/sponsors/ChileTiket-Logotipo.png" alt="ChileTiket"></a>
+                <a href="https://www.puntoticket.com/" target="_blank" rel="noreferrer"><img
+                        src="../IMG/sponsors/PuntoTicket.svg" alt="PuntoTicket"></a>
+                <a href="https://ticketplus.cl/" target="_blank" rel="noreferrer"><img
+                        src="../IMG/sponsors/ticketplus.svg" alt="ticketplus"></a>
+            </div>
+        </div>
+    </main>
+    <div class="copyright">
+        <small>Copyright © 2010-2025 Ticket Company. Todos los derechos reservados.</small>
+    </div>
+    <script src="../JS/formulario.js"></script>
+</body>
+</html>
